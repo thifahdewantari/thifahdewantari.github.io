@@ -1,71 +1,139 @@
+<html>
+
 <head>
-    <title>Hola Thifah!</title>
-    <link rel="stylesheet" href="LayoutWeb.css">
-    <meta charset="utf-8">
+    <title>
+
+
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;600;800&display=swap" rel="stylesheet">
-    <script>
-        function validateform()
-        {
-            var nrp = document.getElementById("nrp");
-            var msg = document.getElementById("msg");
 
-            //cek hanya yang invalid
-            if(nrp.value == "") {
-                nrp.focus();
-                nrp.placeholder = "ex: 5026221112"
-                alert("NRP harus diisi");
-                return false;
-            }
 
-            //harus 10 digit
-            if(nrp.value.length !=10){
-                nrp.focus();
-                alert("NRP harus 10 digit, Anda memasukkan " + nrp.value.length + " digit");
-                return false;
-            }
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-            //yang ada alfabet invalid
-            if(isNaN(nrp.value) == true){
-                nrp.focus();
-                msg.innerHTML = "NRP harus angka!"; //ini kalo gamau pake alert
-                //alert("NRP harus angka!");
-                return false;
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron"> Form validasi adalah mencegah pengiriman data ke server jika yang invalid atau tidak sesuai constraint database</div>
-        <script>
-            function validate()
-            {
-                console.log("baris 22") //untuk menjalankan debugging
-                return false;
-                console.log("baris 23")
-                return true;
-                console.log("baris 24")
-                return false;
-                //default return function adalah true
-            }
-        </script>
-        <form action="https://google.com" method="get" onsubmit="return validateform()"> <!--form ada 2 method (post and get). post digunakan untuk secure (cth: password) dan get digunakan untuk nonsecure-->
-            <div class="form-group">
-                <label for="nrp"> NRP: </label>
-                <input type="text" class="form-control" id="nrp">
-                <div id="msg" class="btn-danger"></div>
-            </div>
+    <div class="container-fluid" style="background-color:white; padding: 0px;">
+        <nav class="navbar navbar-dark fixed-top" style="background-color:rgb(215, 77, 197);">
+            <!--Brand-->
+            <a class=" navbar-brand" href="#" style="padding-left: 1px;"><img src="thifah.jpg" style="height: 35px;"></a>          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links-->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                </ul>
+              </div>
+        </nav>
 
-            <input type="submit" value="DAFTAR" class="btn btn-primary">
-            <input type="reset" value="ULANGI" class="btn btn-warning">
-        </form>
+        <!--Page Title-->
+        <div class="jumbotron text-center" style="background-color: rgb(248, 180, 233);">
+            <h1 style="padding-top: 40px;">Aathifah Dewantari</h1>
+            <p>Bonjour | 여보세요 | Olá | Hello | 你好</p>
+        </div>
+
+        <!--Get To Know Me-->
+        <div class="jumbotron text-center" style="background-color: rgb(203, 185, 252);">
+            <h2 style="text-align: center;">♡ Get To Know Me! ♡</h2>
+            <p>Howdy! I'm Thifah, a dreamer, finding magic in everyday, and a firm believer in the art of slow living ༊*·˚</p>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="about me.png" style="padding-left: 100px; height: 237px; ">
+            </div>
+            <div class="col-md-7">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Full Name</td>
+                            <td>: Aathifah Dewantari Wirya Massangka</td>
+                        </tr>
+                        <tr>
+                            <td>Nick Name</td>
+                            <td>: Thifah</td>
+                        </tr>
+                        <tr>
+                            <td>NRP</td>
+                            <td>: 5026221112</td>
+                        </tr>
+                        <tr>
+                            <td>Place and Date of Birth</td>
+                            <td>: Surabaya, 14 May 2004</td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td>: 19 y.o.</td>
+                        </tr>
+                        <tr>
+                            <td>Hobby</td>
+                            <td>: Travelling</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--Travel as a hobby-->
+        <div class="container">
+            <h2 style="text-align: center; padding-top: 20px; padding-bottom: 15px;"> Travel's Pict✈️</h2>
+            <div class="card-deck" style="margin-left: 120px; margin-right: 120px;">
+                <div>
+                    <img src="korea.jpg" style="height: 200px; margin-right: 15px;">
+                    <div class="card-body text-center">
+                    <p class="card-text">South Korea, 2018</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="china.jpg" style="height: 200px; margin-right: 15px;">
+                    <div class="card-body text-center">
+                    <p class="card-text">China, 2019</p>
+                  </div>
+                </div>
+                <div>
+                    <img src="thailand.jpg" style="height: 200px; margin-right: 15px;">
+                    <div class="card-body text-center">
+                    <p class="card-text">Thailand, 2022</p>
+                  </div>
+                </div>
+                <div>
+                    <img src="bali.jpg" style="height: 200px; margin-right: 15px;">
+                    <div class="card-body text-center">
+                    <p class="card-text">Bali, 2023</p>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+        <!--Experience-->
+        
     </div>
+
 </body>
+
+</html>
