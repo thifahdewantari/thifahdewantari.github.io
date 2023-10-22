@@ -1,10 +1,8 @@
 <html>
 
 <head>
-    <title>
-
-
-    </title>
+    <title></title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Latest compiled and minified CSS -->
@@ -23,11 +21,26 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+    <script>
+        function validateform() {
+            var nrp = document.getElementById("msg");
+            var msg = document.getElementById("msg");
+
+            //cek hanya yang invalid
+            if (nrp.value == "") {
+                nrp.focus();
+                nrp.placeholder = "ex: hello"
+                alert("Please fill out this field");
+                return false;
+            }
+        }
+    </script>
+
 </head>
 
 <body>
-    <div class="container-fluid" style="background-color:white; padding: 0px;">
-        <nav class="navbar navbar-dark fixed-top" style="background-color:rgb(215, 77, 197);">
+    <div class="container-fluid" style="background-color:fefae0; padding: 0px;">
+        <nav class="navbar navbar-dark fixed-top" style="background-color:606c38;">
             <!--Brand-->
             <a class=" navbar-brand" href="#" style="padding-left: 1px;"><img src="thifah.jpg"
                     style="height: 35px;"></a>
@@ -47,18 +60,27 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#section3">Experiences</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section4">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section5">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section6">Contact Me</a>
+                    </li>
                 </ul>
             </div>
         </nav>
 
         <!--Page Title-->
-        <div class="jumbotron text-center" style="background-color: rgb(248, 180, 233);">
+        <div class="jumbotron text-center" style="background-color:fefae0;">
             <h1 style="padding-top: 40px;">Aathifah Dewantari</h1>
             <p>Bonjour | 여보세요 | Olá | Hello | 你好</p>
         </div>
 
         <!--Get To Know Me-->
-        <div class="jumbotron text-center" id="section1" style="background-color: rgb(203, 185, 252);">
+        <div class="jumbotron text-center" id="section1" style="background-color:fefae0;">
             <h2 style="text-align: center;">♡ Get To Know Me! ♡</h2>
             <p>Howdy! I'm Thifah, a dreamer, finding magic in everyday, and a firm believer in the art of slow living
                 ༊*·˚</p>
@@ -182,7 +204,7 @@
         </div>
 
         <!--Education-->
-        <div class="container">
+        <div class="container" id="section4">
             <h2 style="text-align: center; padding-top: 20px; padding-bottom: 15px;">Education</h2>
             <div class="card-deck">
                 <div class="card bg-basic">
@@ -221,32 +243,48 @@
         </div>
 
         <!--Skills-->
-        <div class="container">
+        <div class="container" id="section5">
             <h2 style="text-align: center; padding-top: 20px; padding-bottom: 15px;">My Skills</h2>
             <p style="text-align: center;">Elevate myself, one talent at a time</p>
             <div class="progress" style="height: 20px;">
-                <div class="progress-bar bg-success" style="width:75%; text-align:left; padding-left: 5px;">
+                <div class="progress-bar"
+                    style="width: 75%; background-color: #bc6c25; text-align: left; padding-left: 5px;">
                     Team Leadership
                 </div>
             </div><br>
             <div class="progress" style="height: 20px;">
-                <div class="progress-bar bg-success" style="width:90%; text-align:left; padding-left: 5px;">
+                <div class="progress-bar"
+                    style="width: 90%; background-color: #283618; text-align: left; padding-left: 5px;">
                     Public Relation
                 </div>
             </div><br>
             <div class="progress" style="height: 20px;">
-                <div class="progress-bar bg-success" style="width:88%; text-align:left; padding-left: 5px;">
+                <div class="progress-bar"
+                    style="width: 88%; background-color: #bc6c25; text-align: left; padding-left: 5px;">
                     Public Speaking
                 </div>
             </div><br>
             <div class="progress" style="height: 20px;">
-                <div class="progress-bar bg-success" style="width:70%; text-align:left; padding-left: 5px;">
+                <div class="progress-bar"
+                    style="width: 70%; background-color: #283618; text-align: left; padding-left: 5px;">
                     Event Management
                 </div>
             </div>
         </div>
 
         <!--Contact Me-->
+        <div class="container" id="section6">
+            <h2 style="text-align: center; padding-top: 20px; padding-bottom: 15px;">Send Me A Message</h2>
+            <form action="#" method="get" onsubmit="return validateform()">
+                <div class="form-group">
+                    <label for="msg"> Drop Your Message: </label>
+                    <input type="text" class="form-control" id="msg">
+                    <div id="msg" class="btn-danger"></div>
+                </div>
+
+                <input type="submit" value="SEND" class="btn" style="background-color: #bb9457;">
+            </form>
+        </div>
 
     </div>
 </body>
